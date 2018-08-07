@@ -1,0 +1,23 @@
+<div class="container">
+
+ <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+  <div>
+    <input type="text" formControlName="userID">
+  </div>
+
+  <div>
+    <input type="password" formControlName="password">
+  </div>
+
+  <div>
+    <button type="submit" >Login</button>
+    <a href="/view">bbb</a>         
+    <!-- //it will reload the app -->
+    <a routerLink="/view">ccc</a>    
+    <!-- //it will not reload the app -->
+  </div>
+
+ </form>
+
+</div>

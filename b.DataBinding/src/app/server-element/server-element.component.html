@@ -1,0 +1,20 @@
+<div class="s">
+
+    <hr />
+  
+    <div class="panelByDefault">
+  
+      <div class="panelHeading">{{ element.name }}</div>
+  
+        <p>
+  
+           <strong *ngIf=" element.type === 'server' ">{{ element.content }}</strong>
+  
+           <em *ngIf=" element.type === 'blueprint' ">{{ element.content }}</em>
+  
+        </p>
+
+    </div>
+  
+  </div>  
+  

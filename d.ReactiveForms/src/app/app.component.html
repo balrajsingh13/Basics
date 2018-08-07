@@ -1,0 +1,31 @@
+<div id = "container">
+
+  <form [formGroup]="login_form" (ngSubmit)="onSubmit()">
+
+    <div formGroupName = "user_data">
+ 
+      <div>
+        <label>UserName</label>
+        <input type="text" formControlName="user_name">
+        <span *ngIf="!login_form.get('user_data.user_name').valid && login_form.get('user_data.user_name').touched">Enter Valid username</span>
+      </div>
+      
+      <div>
+        <label>Email</label>
+        <input type="email" formControlName="email">
+        <span *ngIf="!login_form.get('user_data.email').valid && login_form.get('user_data.email').touched">Enter Valid email</span>
+      </div> 
+      
+    </div>
+
+    <div *ngFor="let gender of genders">
+      <label>
+        <input type="radio" [value]="gender" formControlName="gender">{{ gender }}
+      </label>
+    </div>
+   
+    <button type="submit">Login.</button>
+
+  </form>
+
+</div>

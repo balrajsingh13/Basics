@@ -1,0 +1,36 @@
+<button [disabled]="addNewServer" (click)="addServer()">ADD SERVER</button>
+
+<p [innerHTML]="!addNewServer"></p>
+
+<p>{{ addNewServer }}</p>
+
+<p>
+  This server id issa {{ server_id }} and name {{ server_name }}
+</p>
+
+<p>
+  This server id issa {{ server_id }} and name {{ serverFun() }}
+</p>
+
+<p>New Server name issa {{ addNewServerName }}</p>
+
+<p>Enter the new Server Name</p>
+
+<input (input)="addUsersServer($event)">
+
+<p>User entered server's name is {{ user_servers }}</p>
+
+<!-- Now following is two way binding -->
+
+<input [(ngModel)]="user_servers_twoWayBinding">
+
+<p>User entered server's name is {{ user_servers_twoWayBinding }}</p>
+
+<!-- 
+//////////////////////////////////////////////////// -->
+
+<input placeholder="onclick server name will be display" (input)="addOnn1($event)">
+
+<button (click)="addOnn()">Add Server</button>
+
+<p>{{ add_onn2 }}</p>

@@ -1,0 +1,21 @@
+<div class="container">
+
+  <div id = "input_bar">
+    <input type="text" #serverName >
+    <button (click)="addNewServer( serverName.value )">Add Server</button>
+    <button (click)="onClick_POST()">POST Server</button>
+    <button (click)="onClick_GET()">GET Server</button>
+    <button (click)="onClick_PUT()">PUT Server</button>
+    <button (click)="onClick_GET_map()">Get Server(json)</button>
+  </div>
+  
+
+  <div id = "output_bar">
+
+      <ul *ngFor="let server of servers">
+        <li>{{ server.name }}    (ID:{{ server.ID }})</li>
+      </ul>
+
+  </div>
+
+</div>
